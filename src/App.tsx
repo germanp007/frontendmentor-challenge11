@@ -16,7 +16,6 @@ export interface dataType {
   color: Colors;
   icon: string;
   col: string;
-  order: string;
 }
 
 const data: dataType[] = [
@@ -25,8 +24,7 @@ const data: dataType[] = [
     description: "Monitors activity to identify project roadblocks",
     color: "border-t-Cyan",
     icon: lupa,
-    col: "col-span-1",
-    order: "order-1",
+    col: "col-span-1 row-span-2",
   },
   {
     title: "Team Builder",
@@ -35,15 +33,13 @@ const data: dataType[] = [
     color: "border-t-Red",
     icon: team,
     col: "col-span-1",
-    order: "order-3",
   },
   {
     title: "Karma",
     description: "Regularly evaluates our talent to ensure quality",
     color: "border-t-Orange",
     icon: karma,
-    col: "col-span-1",
-    order: "order-2",
+    col: "col-span-1 row-span-2",
   },
   {
     title: "Calculator",
@@ -52,7 +48,6 @@ const data: dataType[] = [
     color: "border-t-Blue",
     icon: calculator,
     col: "col-span-1",
-    order: "order-1",
   },
 ];
 
@@ -60,11 +55,11 @@ const App = () => {
   return (
     <main className="min-h-screen font-Poppins pb-10 bg-Very-Light-Gray shadow-lg shadow-cyan-500/50">
       <div className=" w-full h-[322px] flex flex-col justify-center items-center">
-        <h1 className="text-[24px] font-[200] text-Very-Dark-Blue text-center md:text-[32px]">
+        <h1 className="text-[24px] font-[200] text-Very-Dark-Blue text-center md:text-[36px]">
           {" "}
           Reliable, efficient delivery
         </h1>
-        <h1 className="text-[24px] font-[600] text-Very-Dark-Blue text-center mb-4 md:text-[32px]">
+        <h1 className="text-[24px] font-[600] text-Very-Dark-Blue text-center mb-4 md:text-[36px]">
           Powered by Technology
         </h1>
         <p className="text-[15px] text-Grayish-Blue text-center mx-10 md:text-[14px] md:w-[500px]">
@@ -72,7 +67,7 @@ const App = () => {
           points to ensure that your project is successful
         </p>
       </div>
-      <div className="flex flex-col gap-6 lg:grid lg:grid-cols-3">
+      <div className="flex flex-col gap-6 desktop:grid desktop:grid-cols-3 desktop:w-[990px] lg:m-auto ">
         {data.map((ele, index) => {
           return (
             <Card
@@ -82,7 +77,6 @@ const App = () => {
               color={ele.color}
               icon={ele.icon}
               col={ele.col}
-              order={ele.order}
             />
           );
         })}

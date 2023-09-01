@@ -15,6 +15,9 @@ export default {
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
       },
+      screens: {
+        desktop: "1025px",
+      },
     },
   },
   plugins: [],
