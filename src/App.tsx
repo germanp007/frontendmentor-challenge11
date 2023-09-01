@@ -4,7 +4,11 @@ import team from "./assets/images/icon-team-builder.svg";
 import karma from "./assets/images/icon-karma.svg";
 import calculator from "./assets/images/icon-calculator.svg";
 
-export type Colors = "Cyan" | "Red" | "Orange" | "Blue";
+export type Colors =
+  | "border-t-Cyan"
+  | "border-t-Red"
+  | "border-t-Orange"
+  | "border-t-Blue";
 
 export interface dataType {
   title: string;
@@ -17,33 +21,33 @@ const data: dataType[] = [
   {
     title: "Supervisor",
     description: "Monitors activity to identify project roadblocks",
-    color: "Cyan",
+    color: "border-t-Cyan",
     icon: lupa,
   },
   {
     title: "Team Builder",
     description:
       "Scans our talent network to create the optimal team for your project",
-    color: "Red",
+    color: "border-t-Red",
     icon: team,
   },
   {
     title: "Supervisor",
     description: "Monitors activity to identify project roadblocks",
-    color: "Orange",
+    color: "border-t-Orange",
     icon: karma,
   },
   {
     title: "Supervisor",
     description: "Monitors activity to identify project roadblocks",
-    color: "Blue",
+    color: "border-t-Blue",
     icon: calculator,
   },
 ];
 
 const App = () => {
   return (
-    <main className="min-h-screen font-Poppins bg-Very-Light-Gray shadow-lg shadow-cyan-500/50">
+    <main className="min-h-screen font-Poppins pb-10 bg-Very-Light-Gray shadow-lg shadow-cyan-500/50">
       <div className=" w-full h-[322px] flex flex-col justify-center items-center">
         <h1 className="text-[24px] font-[200] text-Very-Dark-Blue text-center">
           {" "}
