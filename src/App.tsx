@@ -15,6 +15,8 @@ export interface dataType {
   description: string;
   color: Colors;
   icon: string;
+  col: string;
+  order: string;
 }
 
 const data: dataType[] = [
@@ -23,6 +25,8 @@ const data: dataType[] = [
     description: "Monitors activity to identify project roadblocks",
     color: "border-t-Cyan",
     icon: lupa,
+    col: "col-span-1",
+    order: "order-1",
   },
   {
     title: "Team Builder",
@@ -30,18 +34,25 @@ const data: dataType[] = [
       "Scans our talent network to create the optimal team for your project",
     color: "border-t-Red",
     icon: team,
+    col: "col-span-1",
+    order: "order-3",
   },
   {
-    title: "Supervisor",
-    description: "Monitors activity to identify project roadblocks",
+    title: "Karma",
+    description: "Regularly evaluates our talent to ensure quality",
     color: "border-t-Orange",
     icon: karma,
+    col: "col-span-1",
+    order: "order-2",
   },
   {
-    title: "Supervisor",
-    description: "Monitors activity to identify project roadblocks",
+    title: "Calculator",
+    description:
+      "Uses data from past projects to provide better delivery estimates",
     color: "border-t-Blue",
     icon: calculator,
+    col: "col-span-1",
+    order: "order-1",
   },
 ];
 
@@ -49,26 +60,29 @@ const App = () => {
   return (
     <main className="min-h-screen font-Poppins pb-10 bg-Very-Light-Gray shadow-lg shadow-cyan-500/50">
       <div className=" w-full h-[322px] flex flex-col justify-center items-center">
-        <h1 className="text-[24px] font-[200] text-Very-Dark-Blue text-center">
+        <h1 className="text-[24px] font-[200] text-Very-Dark-Blue text-center md:text-[32px]">
           {" "}
           Reliable, efficient delivery
         </h1>
-        <h1 className="text-[24px] font-[600] text-Very-Dark-Blue text-center mb-4">
+        <h1 className="text-[24px] font-[600] text-Very-Dark-Blue text-center mb-4 md:text-[32px]">
           Powered by Technology
         </h1>
-        <p className="text-[15px] text-Grayish-Blue text-center mx-10">
+        <p className="text-[15px] text-Grayish-Blue text-center mx-10 md:text-[14px] md:w-[500px]">
           Our Artificial Intelligence powered tools use millions of project data
           points to ensure that your project is successful
         </p>
       </div>
-      <div className="flex flex-col gap-6">
-        {data.map((ele) => {
+      <div className="flex flex-col gap-6 lg:grid lg:grid-cols-3">
+        {data.map((ele, index) => {
           return (
             <Card
+              key={index}
               title={ele.title}
               description={ele.description}
               color={ele.color}
               icon={ele.icon}
+              col={ele.col}
+              order={ele.order}
             />
           );
         })}

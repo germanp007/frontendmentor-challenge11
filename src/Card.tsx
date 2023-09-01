@@ -9,12 +9,21 @@ interface DataType {
   description: string;
   color: Colors;
   icon: string;
+  col: string;
+  order: string;
 }
 
-const Card: React.FC<DataType> = ({ title, description, color, icon }) => {
+const Card: React.FC<DataType> = ({
+  title,
+  description,
+  color,
+  icon,
+  col,
+  order,
+}) => {
   return (
     <article
-      className={`shadow-2xl w-[314px] h-[224px] bg-white m-auto px-[30px] pt-[35px] pb-[25px] flex flex-col justify-between rounded-lg border-t-[5px] ${color}`}
+      className={`shadow-2xl w-[314px] h-[224px] bg-white m-auto px-[30px] pt-[35px] pb-[25px] flex flex-col justify-between rounded-lg border-t-[5px] ${color} md:${col} md:${order}`}
     >
       <div>
         <h1 className="text-left text-[20px] text-Very-Dark-Blue font-[800]">
