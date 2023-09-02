@@ -24,7 +24,7 @@ const data: dataType[] = [
     description: "Monitors activity to identify project roadblocks",
     color: "border-t-Cyan",
     icon: lupa,
-    col: "col-span-1 row-span-2",
+    col: "col-span-1 row-span-2 order-1",
   },
   {
     title: "Team Builder",
@@ -32,14 +32,14 @@ const data: dataType[] = [
       "Scans our talent network to create the optimal team for your project",
     color: "border-t-Red",
     icon: team,
-    col: "col-span-1",
+    col: "col-span-1 order-2",
   },
   {
     title: "Karma",
     description: "Regularly evaluates our talent to ensure quality",
     color: "border-t-Orange",
     icon: karma,
-    col: "col-span-1 row-span-2",
+    col: "col-span-1 order-3 desktop:order-4",
   },
   {
     title: "Calculator",
@@ -47,7 +47,7 @@ const data: dataType[] = [
       "Uses data from past projects to provide better delivery estimates",
     color: "border-t-Blue",
     icon: calculator,
-    col: "col-span-1",
+    col: "col-span-1 row-span-2 order-4 desktop:order-3",
   },
 ];
 
