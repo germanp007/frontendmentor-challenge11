@@ -1,21 +1,14 @@
-type Colors =
-  | "border-t-Cyan"
-  | "border-t-Red"
-  | "border-t-Orange"
-  | "border-t-Blue";
-
 interface DataType {
   title: string;
   description: string;
-  color: Colors;
+  class: string;
   icon: string;
-  col: string;
 }
 
 const Card: React.FC<DataType> = ({ ...props }) => {
   return (
     <article
-      className={`shadow-2xl w-[314px] h-[224px] bg-white m-auto px-[30px] pt-[35px] pb-[25px] flex flex-col justify-between rounded-lg border-t-[5px] ${props.color} md:${props.col} `}
+      className={`shadow-2xl w-[314px] h-[224px] bg-white m-auto px-[30px] pt-[35px] pb-[25px] flex flex-col justify-between rounded-lg border-t-[5px] ${props.class} `}
     >
       <div>
         <h1 className="text-left text-[20px] text-Very-Dark-Blue font-[800]">

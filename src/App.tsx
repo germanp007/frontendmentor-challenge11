@@ -4,50 +4,39 @@ import team from "./assets/images/icon-team-builder.svg";
 import karma from "./assets/images/icon-karma.svg";
 import calculator from "./assets/images/icon-calculator.svg";
 
-export type Colors =
-  | "border-t-Cyan"
-  | "border-t-Red"
-  | "border-t-Orange"
-  | "border-t-Blue";
-
 export interface dataType {
   title: string;
   description: string;
-  color: Colors;
+  class: string;
   icon: string;
-  col: string;
 }
 
 const data: dataType[] = [
   {
     title: "Supervisor",
     description: "Monitors activity to identify project roadblocks",
-    color: "border-t-Cyan",
+    class: "border-t-Cyan col-span-1 row-span-2 order-1",
     icon: lupa,
-    col: "col-span-1 row-span-2 order-1",
   },
   {
     title: "Team Builder",
     description:
       "Scans our talent network to create the optimal team for your project",
-    color: "border-t-Red",
+    class: "border-t-Red col-span-1 order-2",
     icon: team,
-    col: "col-span-1 order-2",
   },
   {
     title: "Karma",
     description: "Regularly evaluates our talent to ensure quality",
-    color: "border-t-Orange",
+    class: "border-t-Orange col-span-1 order-3 desktop:order-4",
     icon: karma,
-    col: "col-span-1 order-3 desktop:order-4",
   },
   {
     title: "Calculator",
     description:
       "Uses data from past projects to provide better delivery estimates",
-    color: "border-t-Blue",
+    class: "border-t-Blue col-span-1 row-span-2 order-4 desktop:order-3",
     icon: calculator,
-    col: "col-span-1 row-span-2 order-4 desktop:order-3",
   },
 ];
 
@@ -74,9 +63,8 @@ const App = () => {
               key={index}
               title={ele.title}
               description={ele.description}
-              color={ele.color}
+              class={ele.class}
               icon={ele.icon}
-              col={ele.col}
             />
           );
         })}
